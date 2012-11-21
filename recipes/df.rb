@@ -20,7 +20,8 @@
 include_recipe "collectd"
 
 collectd_plugin "df" do
-  options(:report_reserved=>false,
-          "FSType"=>["proc", "sysfs", "fusectl", "debugfs", "securityfs", "devtmpfs", "devpts", "tmpfs"],
-          :ignore_selected=>true)
+  options(:report_reserved => node['collectd_plugins']['df']['report_reserved'],
+          :report_inodes => node['collectd_plugins']['df']['report_inodes'],
+          "FSType" => [node['collectd_plugins']['df']['selected_fstypes']].flatten,
+          :ignore_selected => node['collectd_plugins']['df']['ignore_selected'])
 end

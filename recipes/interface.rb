@@ -20,5 +20,6 @@
 include_recipe "collectd"
 
 collectd_plugin "interface" do
-  options :interface=>"lo", :ignore_selected=>true
+  options :interface => [node['collectd_plugins']['interface']['selected_interfaces']].flatten,
+    :ignore_selected => node['collectd_plugins']['interface']['ignore_selected']
 end
