@@ -29,5 +29,5 @@ collectd_plugin 'write_graphite' do
     'AlwaysAppendDS' => false,
   )
   cookbook 'collectd_plugins'
-  template 'write_graphite.conf.rb'
+  template 'write_graphite.conf.erb'
 end
