@@ -18,8 +18,9 @@ A number of recipes for standard plugins are available:
 * `collectd_plugins::interface` - Network I/O operations.
 * `collectd_plugins::memory` - Memory usage.
 * `collectd_plugins::swap` - Swap file usage.
+* `collectd_plugins::write_graphite` - Stores values in Carbon, the storage layer of Graphite.
 
-It is recommended to always enable the first two (rrdtool and syslog), but the others are entirely optional. For convenience, the `collectd_plugins` default recipe will include all of these.
+It is recommended to always enable the first two (rrdtool and syslog), but the others are entirely optional. For convenience, the `collectd_plugins` default recipe will include all of these (except `write_graphite`).
 
 ## Redis ##
 
