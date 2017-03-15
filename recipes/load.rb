@@ -1,8 +1,8 @@
 #
 # Cookbook Name:: collectd_plugins
-# Recipe:: syslog
+# Recipe:: swap
 #
-# Copyright 2010, Atari, Inc
+#
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -19,6 +19,4 @@
 
 include_recipe "collectd"
 
-collectd_plugin "syslog" do
-  options :log_level => node['collectd_plugins']['syslog']['log_level']
-end
+collectd_plugin "load"
